@@ -1,0 +1,15 @@
+.container {
+  margin: 30px 300px;
+  padding: 10px 40px;
+  background-color: #fefefe;
+  border-radius: 15px;
+}
+
+.container p {
+  color: #595456;
+}
+
+.content-header {
+  text-align: center;
+  color: #03b57b;
+}
