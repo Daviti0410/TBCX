@@ -38,3 +38,27 @@
   color: black;
   background-color: #ffff;
 }
+
+.middle-content-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  gap: 80px;
+}
+.contact-info {
+  width: 400px;
+  height: 370px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d8c3a5;
+}
+
+.inner-contact-info {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.gap {
+  display: flex;
+  align-items: center;
+}
