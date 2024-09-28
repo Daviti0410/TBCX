@@ -1,4 +1,3 @@
-import React from "react";
 import "./Content.css";
 import { Box1, Box2, Box3 } from "./Cards";
 

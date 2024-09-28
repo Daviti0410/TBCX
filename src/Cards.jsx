@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export function Box1(props) {
   return (
@@ -29,3 +29,14 @@ export function Box3(props) {
     </div>
   );
 }
+Box1.propTypes = {
+  backgroundColor: PropTypes.string,
+};
+
+Box2.propTypes = {
+  backgroundColor: PropTypes.string,
+};
+
+Box3.propTypes = {
+  backgroundColor: PropTypes.string,
+};

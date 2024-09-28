@@ -2,8 +2,8 @@ import "./Footer.css";
 
 export default function footer() {
   return (
-    <footer class="footer-section">
-      <ul class="footer-links">
+    <footer className="footer-section">
+      <ul className="footer-links">
         <li>
           <a href="#">Home</a>
         </li>
