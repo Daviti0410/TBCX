@@ -22,7 +22,10 @@ export default function Contact() {
               <FaPhoneFlip /> +995 591941921
             </p>
             <p>
-              <IoMail /> <a>lazariashvilidato@gmail.com</a>
+              <IoMail />{" "}
+              <a href="mailto:lazariashvilidato@gmail.com">
+                lazariashvilidato@gmail.com
+              </a>
             </p>
           </div>
         </div>
