@@ -5,6 +5,7 @@ import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
+import Contact from "./Contact.jsx";
 
 const Layout = () => {
   return (
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/About",
         element: <About />,
+      },
+      {
+        path: "/Contact",
+        element: <Contact />,
       },
     ],
   },
