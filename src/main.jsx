@@ -6,6 +6,7 @@ import Footer from "./Footer.jsx";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
+import Assigment3 from "./Assigment3.jsx";
 
 const Layout = () => {
   return (
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/Contact",
         element: <Contact />,
+      },
+      {
+        path: "/Assigment3",
+        element: <Assigment3 />,
       },
     ],
   },
