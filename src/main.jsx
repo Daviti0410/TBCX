@@ -8,6 +8,7 @@ import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import Assigment3 from "./Assigment3.jsx";
 import Blog from "./Blog.jsx";
+import Profile from "./Profile.jsx";
 
 const Layout = () => {
   return (
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/Blog",
         element: <Blog />,
+      },
+      {
+        path: "/Profile",
+        element: <Profile />,
       },
     ],
   },

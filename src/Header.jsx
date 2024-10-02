@@ -1,4 +1,5 @@
 import "./Header.css";
+import { CgProfile } from "react-icons/cg";
 
 export default function Header() {
   return (
@@ -23,6 +24,11 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        <div className="profile">
+          <a href="/Profile">
+            <CgProfile size={30} />
+          </a>
+        </div>
       </div>
     </header>
   );
