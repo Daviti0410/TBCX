@@ -7,6 +7,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import Assigment3 from "./Assigment3.jsx";
+import Blog from "./Blog.jsx";
 
 const Layout = () => {
   return (
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/Assigment3",
         element: <Assigment3 />,
+      },
+      {
+        path: "/Blog",
+        element: <Blog />,
       },
     ],
   },
