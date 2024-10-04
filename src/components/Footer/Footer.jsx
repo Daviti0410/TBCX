@@ -1,20 +1,21 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 
 export default function footer() {
   return (
     <footer className="footer-section">
       <ul className="footer-links">
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/About">About Us</a>
+          <Link to="/About">About Us</Link>
         </li>
         <li>
-          <a href="/Blog">Blog</a>
+          <Link to="/Blog">Blog</Link>
         </li>
         <li>
-          <a href="/Contact">Contact Us</a>
+          <Link to="/Contact">Contact Us</Link>
         </li>
       </ul>
     </footer>

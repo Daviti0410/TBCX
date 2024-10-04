@@ -1,33 +1,34 @@
 import "./Header.css";
 import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header>
       <div className="header-container">
         <div className="logo">
-          <a href="/">MyWebsite</a>
+          <Link to="/">MyWebsite</Link>
         </div>
         <nav className="navbar">
           <ul className="nav-list">
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/Blog">Blog</a>
+              <Link to="/Blog">Blog</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
         <div className="profile">
-          <a href="/Profile">
+          <Link to="/Profile">
             <CgProfile size={30} />
-          </a>
+          </Link>
         </div>
       </div>
     </header>

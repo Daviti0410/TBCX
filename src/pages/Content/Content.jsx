@@ -1,5 +1,5 @@
 import "./Content.css";
-import { Box1, Box2, Box3 } from "./Cards";
+import { Box1, Box2, Box3 } from "../../components/Cards/Cards";
 
 export default function Content() {
   return (
