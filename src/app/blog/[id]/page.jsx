@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./PostDetail.css";
 
 async function fetchPost(id) {
   const res = await axios.get(`https://dummyjson.com/posts/${id}`);
@@ -13,12 +14,10 @@ export default async function PostDetail({ params }) {
   }
 
   return (
-    <div>
-      <div className="blog-list">
-        <div className="blog-content">
-          <h1>{post.title}</h1>
-          <p>{post.body}</p>
-        </div>
+    <div className="main-container">
+      <div className="post-container">
+        <h1 className="post-title">{post.title}</h1>
+        <p className="post-body">{post.body}</p>
       </div>
     </div>
   );
