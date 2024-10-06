@@ -25,7 +25,7 @@ export default function Content() {
 
   return (
     <main className="outer-container">
-      <div className="container">
+      <div className="container product-card">
         {products.length > 0 ? (
           products.map((product) => (
             <ProductCard
