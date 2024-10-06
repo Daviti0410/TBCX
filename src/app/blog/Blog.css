@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
   color: black;
 }
 
@@ -16,13 +17,6 @@
   border-radius: 10px;
   border: 1px black solid;
 }
-/* .blog-list img {
-  width: 150px;
-  height: 150px;
-  margin-top: 25px;
-  border: 1px solid black;
-  border-radius: 10px;
-} */
 
 .Link {
   color: rgb(247, 158, 50);
