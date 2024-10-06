@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: black;
+  color: #000000;
 }
 
 .post-container {
@@ -23,7 +23,7 @@
 .post-title {
   font-size: 36px;
   font-weight: bold;
-  color: rgb(247, 158, 50);
+  color: #f79e32;
   margin-bottom: 20px;
   text-align: center;
 }

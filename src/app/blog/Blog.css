@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: black;
+  color: #000000;
 }
 
 .blog-list {
@@ -15,9 +15,9 @@
   padding: 50px;
   gap: 50px;
   border-radius: 10px;
-  border: 1px black solid;
+  border: 1px #000000 solid;
 }
 
 .Link {
-  color: rgb(247, 158, 50);
+  color: #f79e32;
 }
