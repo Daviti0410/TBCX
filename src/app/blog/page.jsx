@@ -3,7 +3,7 @@ import "./Blog.css";
 export default function Blog() {
   const blogPosts = [
     {
-      imgSrc: "/public/bill-board.jpg",
+      imgSrc: "../public/bill-board.jpg",
       altText: "Billboard Image",
       title: "Billboard",
       description:
