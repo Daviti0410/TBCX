@@ -28,7 +28,7 @@ export default function Header() {
           </ul>
         </nav>
         <div className="profile">
-          <Link href="/Profile">
+          <Link href="/profile">
             <CgProfile size={30} />
           </Link>
         </div>
