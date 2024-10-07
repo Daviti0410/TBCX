@@ -6,6 +6,13 @@
   height: 80vh;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .container {
   display: grid;
   width: 100%;
