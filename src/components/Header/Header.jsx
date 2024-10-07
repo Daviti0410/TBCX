@@ -14,9 +14,6 @@ export default function Header() {
         <nav className="navbar">
           <ul className="nav-list">
             <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
               <Link href="/about">About</Link>
             </li>
             <li>

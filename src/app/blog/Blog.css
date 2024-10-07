@@ -4,20 +4,30 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  color: #000000;
+  color: white;
+ 
 }
 
 .blog-list {
   max-width: 700px;
   display: flex;
-  background-color: #ffff;
   margin: 30px;
   padding: 50px;
   gap: 50px;
-  border-radius: 10px;
-  border: 1px #000000 solid;
+  border: 8px solid white;
 }
 
+p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .Link {
-  color: #f79e32;
+  border: 1px solid white;
+  padding: 5px;
+  color: white;
+  transition: .3s;
+}
+.Link:hover {
+  background-color: white;
+  color: black;
 }
