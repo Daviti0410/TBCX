@@ -6,7 +6,6 @@ import { IoMail } from "react-icons/io5";
 export default function Contact() {
   return (
     <main className="outer-contact-container">
-      <h2>Contact Us</h2>
       <div className="middle-content-container">
         <div className="contact-info">
           <h2>Mail</h2>
@@ -53,7 +52,7 @@ export default function Contact() {
               name="message"
             />
           </div>
-          <button>submit</button>
+          <div className="contact-button">SUBMIT</div>
         </form>
       </div>
     </main>

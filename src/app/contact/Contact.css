@@ -3,13 +3,12 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  color: black;
+  color: white;
   
 }
 .inner-contact-container {
   width: 500px;
-  height: 400px;
-  background-color: #d8c3a5;
+  background-color: black;
   border-radius: 10px;
   margin-bottom: 46.5px;
 }
@@ -22,44 +21,91 @@
 }
 
 .form-group input {
-  height: 20px;
-  border-radius: 8px;
-  margin-top: 10px;
-  padding-left: 8px;
-  color: black;
-  background-color: #ffff;
+  height: 54px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 0;
+  outline: none;
+  color: #262c46;
+  font-size: 16px;
+  text-align: start;
+  width: 415px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  margin-top: 15px;
 }
-
 .form-group textarea {
-  min-width: 400px;
   min-height: 100px;
-  margin-top: 10px;
-  padding-left: 8px;
-  border-radius: 8px;
-  color: black;
-  background-color: #ffff;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border: 0;
+  outline: none;
+  color: #262c46;
+  font-size: 16px;
+  text-align: start;
+  width: 415px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  margin-top: 15px;
 }
 
 .middle-content-container {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   margin-left: 40px;
+  margin-top: 40px;
   gap: 80px;
 }
 .contact-info {
-  width: 400px;
+  width: 415px;
   height: 370px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #d8c3a5;
+  border: 3px solid white;
 }
-
+.contact-info > h2 {
+  border-bottom: 3px solid white;
+  padding-bottom: 12px;
+}
+.contact-info > p {
+  padding-top: 20px;
+}
 .inner-contact-info {
   text-align: left;
   padding-top: 30px;
 }
-
+.inner-contact-info > p {
+  padding-top: 20px;
+}
 .gap {
   display: flex;
   align-items: center;
+}
+.contact-button {
+  width: 415px;
+  height: 54px;
+  border: 3px solid #fff;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 11px 15px;
+  color: white;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+  transition: 0.3s;
+  margin: 15px;
 }
