@@ -14,10 +14,18 @@ export default async function PostDetail({ params }) {
   }
 
   return (
-    <div className="main-container">
-      <div className="post-container">
-        <h1 className="post-title">{product.title}</h1>
-        <p className="post-body">{product.body}</p>
+    <div className="main-card">
+      <div className="">
+        <h2>rating: {product.rating}</h2>
+        <h1 className="">{product.title}</h1>
+        <h1>Brand: {product.brand}</h1>
+        <div>
+            <img src={product.images} alt="image" />
+        </div>
+        <p className="">{product.description}</p>
+        <h3>{product.price}</h3>
+        <p>{product.discountPercentage}% of discount</p>
+        
       </div>
     </div>
   );
