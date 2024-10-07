@@ -5,6 +5,7 @@ import "./Content.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ProductCard } from "../../components/Cards/Cards";
+import Link from "next/link";
 
 export default function Content() {
   const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ export default function Content() {
       <div className="container product-card">
         {products.length > 0 ? (
           products.map((product) => (
+            <Link href={`/content/${product.id}`}>  
             <ProductCard
               key={product.id}
               title={product.title}
@@ -35,6 +37,7 @@ export default function Content() {
               image={product.thumbnail}
               description={product.description}
             />
+            </Link>
           ))
         ) : (
           <p>Loading...</p>
