@@ -15,17 +15,19 @@ export default async function PostDetail({ params }) {
 
   return (
     <div className="main-card">
-      <div className="">
-        <h2>rating: {product.rating}</h2>
-        <h1 className="">{product.title}</h1>
-        <h1>Brand: {product.brand}</h1>
-        <div>
-            <img src={product.images} alt="image" />
-        </div>
-        <p className="">{product.description}</p>
-        <h3>{product.price}</h3>
-        <p>{product.discountPercentage}% of discount</p>
-        
+      <h1>{product.brand}</h1>
+      <div className="inner-container">
+            <div className="for-image">
+                <img src={product.images} alt="image" />
+            </div>
+            <div className="info-container">
+                <h2>Rating: {product.rating}⭐</h2>
+                <h1 className="title">{product.title}</h1>
+                <p className="availability">{product.availabilityStatus}</p>
+                <h3>Price: {product.price}$</h3>
+                <p className="description">{product.description}</p>
+                <button className="button">Add To The Card</button>
+            </div>
       </div>
     </div>
   );
