@@ -2,7 +2,6 @@
 
 import "./Blog.css";
 import Loading from "@/components/Loading/Loading";
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Link from "next/link";

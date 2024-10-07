@@ -29,14 +29,13 @@ export default function Content() {
       <div className="container product-card">
         {products.length > 0 ? (
           products.map((product) => (
-            <Link href={`/content/${product.id}`}>  
-            <ProductCard
-              key={product.id}
-              title={product.title}
-              price={product.price}
-              image={product.thumbnail}
-              description={product.description}
-            />
+            <Link href={`/content/${product.id}`} key={product.id}>
+              <ProductCard
+                title={product.title}
+                price={product.price}
+                image={product.thumbnail}
+                description={product.description}
+              />
             </Link>
           ))
         ) : (
