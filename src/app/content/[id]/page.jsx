@@ -9,6 +9,7 @@ async function fetchContent(id) {
 export default async function PostDetail({ params }) {
   const product = await fetchContent(params.id);
 
+
   if (!product) {
     return <div>Loading...</div>;
   }
@@ -25,8 +26,8 @@ export default async function PostDetail({ params }) {
                 <h1 className="title">{product.title}</h1>
                 <p className="availability">{product.availabilityStatus}</p>
                 <h3>Price: {product.price}$</h3>
-                <p className="description">{product.description}</p>
-                <button className="button">Add To The Card</button>
+                <p className="description">{product.description}</p>               
+                   <button className="button">Add To The Card</button>                               
             </div>
       </div>
     </div>

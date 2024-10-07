@@ -74,6 +74,17 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
+.adding {
+    display: flex;
+    justify-content: space-evenly;
+}
+.adding div {
+    display: flex;
+    align-items: center;
+}
+
+
+
 .button:hover {
     transform: scale(1.05);
     background-color: rgb(88, 88, 88);
