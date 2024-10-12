@@ -1,5 +1,6 @@
 .outer-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -36,6 +37,17 @@
   background-color: #888;
   border-radius: 10px;
   border: 2px solid #f1f1f1;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  margin-top: 1rem;
+  font-size: larger;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .container::-webkit-scrollbar-thumb:hover {
