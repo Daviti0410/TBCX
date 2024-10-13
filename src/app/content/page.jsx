@@ -3,10 +3,13 @@ import axios from "axios";
 import { ProductCard } from "../../components/Cards/Cards";
 import Link from "next/link";
 import Button from "@/components/Button/page";
+import Search from "@/components/Search/page";
 
-async function fetchPost(sort) {
+async function fetchPost(query, sort) {
   let url = "https://dummyjson.com/products";
-  if (sort === "asc") {
+  if (query) {
+    url = `https://dummyjson.com/products/search?q=${query}`;
+  } else if (sort === "asc") {
     url += "?sortBy=title&order=asc";
   }
 
@@ -20,13 +23,16 @@ async function fetchPost(sort) {
 }
 
 export default async function Content({ searchParams }) {
-  const { sort } = searchParams || {};
-  const products = await fetchPost(sort);
+  const { q: query, sort } = searchParams || {};
+  const products = await fetchPost(query, sort);
 
   return (
     <>
       <main className="outer-container">
-        <Button />
+        <div className="component-container">
+          <Button />
+          <Search />
+        </div>
         <div className="container product-card">
           {products.length > 0 ? (
             products.map((product) => (
