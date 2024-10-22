@@ -1,0 +1,53 @@
+.Header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgb(102, 4, 48), rgb(133, 34, 4));
+  padding: 1rem 2rem;
+  color: white;
+  z-index: 999;
+}
+
+nav .Header-ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.Header-ul li,
+.Link {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.31s;
+  font-weight: bold;
+}
+
+.Header-ul li:hover {
+  transform: scale(1.2);
+}
+
+.Link {
+  color: white;
+  text-decoration: none;
+}
+.Header-ul > button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: rgb(92, 5, 5);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.Header-logo {
+  font-size: 2.8rem;
+  font-weight: bold;
+}
