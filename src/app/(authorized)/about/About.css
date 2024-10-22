@@ -1,9 +1,11 @@
 .about-container {
-  margin: 30px 0;
+  height: 80vh;
+  overflow: auto;
 }
 .about-inner-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .about-first-container > h1 {
