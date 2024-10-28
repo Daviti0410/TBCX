@@ -1,18 +1,8 @@
-import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Header from "@/Components/Header/Header";
+import Footer from "@/Components/Footer/Footer";
+import AuthWrapper from "@/components/AuthWrapper/AuthWrapper";
 
 export const metadata = {
   title: "Create Next App",
@@ -22,10 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+      <body>
+        <AuthWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </AuthWrapper>
       </body>
     </html>
   );

@@ -2,9 +2,27 @@
 
 import Link from "next/link";
 import "./Header.css";
-import { CgProfile } from "react-icons/cg";
+import { useRouter } from "next/navigation";
+import { logout } from "@/lib/action";
 
 export default function Header() {
+
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    try {
+      const result = await logout();
+      if (result.success) {
+        router.push("/login");
+      } else {
+        console.error("Logout failed", result.message);
+      }
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };
+
+
   return (
     <header>
       <div className="header-container">
@@ -23,15 +41,16 @@ export default function Header() {
               <Link href="/contact">Contact</Link>
             </li>
             <li>
-              <Link href="/content">Content</Link>
+              <Link href="/products">Produts</Link>
+            </li>
+            <li>
+              <Link href="/profile">Profile</Link>
             </li>
           </ul>
         </nav>
-        <div className="profile">
-          <Link href="/profile">
-            <CgProfile size={30} />
-          </Link>
-        </div>
+        <button className="header-button" onClick={handleLogout}>
+        Log Out
+      </button>
       </div>
     </header>
   );
