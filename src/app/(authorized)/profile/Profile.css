@@ -1,66 +1,127 @@
-.profile-container {
-  max-width: 400px;
-  height: 450px;
-  margin: 0 auto;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../../../../public/assets/kadi.jpg")
+  no-repeat center center;
+background-size: cover;
+  background-color: black;
+  background-size: cover;
+  color: white;
   text-align: center;
+  padding: 20px;
   margin-top: 50px;
-  border: 3px solid white;
 }
 
-.profile-header {
+.profile-container {
+  background-color: rgba(0, 0, 0, 0.29); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 900px;
+  margin: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid white;
+}
+
+.profile-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.profile-intro {
+  font-size: 20px;
   margin-bottom: 20px;
 }
-.profile-header > h1 {
-  padding-top: 20px;
-}
-.profile-header > p {
-  padding-top: 20px;
-}
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 3px solid #ffffff;
-  margin-bottom: 10px;
-  object-fit: cover;
-  margin-top: 20px;
+
+.profile-layout {
+  display: flex;
+  justify-content: space-between;
 }
 
-.profile-name {
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
+.profile-about {
+  flex: 1;
+  margin-right: 20px;
 }
-
-.profile-bio {
+.profile-about > h4 {
+  font-size: 30px;
+  text-align: start;
+}
+.profile-about > p {
+  text-align: start;
+  padding-top: 10px;
   font-size: 16px;
+}
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover
+}
+
+.profile-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-url {
+  margin: 0 5px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+.profile-details > h4 {
+  font-size: 25px;
+  text-align: start;
+}
+.profile-details > div {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.profile-details > div > span {
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 20px;
+  color: gray;
+}
+.profile-details > div > span > p{
+  padding-top: 5px;
+  display: flex;
   color: white;
-  margin: 5px 0;
-}
-
-.profile-location,
-.profile-email {
-  font-size: 14px;
-  color: white;
-}
-
-.social-links {
-  margin-top: 35px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  padding: 10px 15px;
-  background-color: black;
-  border: 1px solid white;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-  background-color: white;
-  color: black;
+  font-size: 16px;
 }
