@@ -1,12 +1,11 @@
+import BlogPosts from "@/components/BlogPosts/page";
 import "./Blog.css";
-import Loading from "@/components/Loading/Loading";
-import axios from "axios";
-import Link from "next/link";
 
-export async function getPosts() {
+
+async function fetchPosts() {
   try {
-    const results = await axios.get("https://dummyjson.com/posts");
-    const data = results.data;
+    const res = await fetch("https://dummyjson.com/posts");
+    const data = await res.json();
     return data.posts;
   } catch (error) {
     console.error("Error fetching posts:", error);
@@ -15,22 +14,11 @@ export async function getPosts() {
 }
 
 export default async function Blog() {
-  const posts = await getPosts();
+  const postsData = await fetchPosts();
+
   return (
-    <main className="blog-container">
-      <div className="blog-inner-container">
-        {posts.map((post) => (
-          <div className="blog-list" key={post.id}>
-            <div className="blog-content">
-              <h2>{post.title}</h2>
-              <p>{post.body}</p>
-              <Link className="Link" href={`/blog/${post.id}`}>
-                Open Post
-              </Link>
-            </div>
-          </div>
-        ))}
-      </div>
-    </main>
+    <section className="Blog">
+      <BlogPosts posts={postsData} />
+    </section>
   );
 }

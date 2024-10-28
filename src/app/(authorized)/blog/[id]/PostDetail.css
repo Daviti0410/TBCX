@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   min-height: 75vh;
+  background: url("../../../../../public/assets/253109.jpg") center;
 }
 
 .post-container {
@@ -20,7 +21,7 @@
 .post-title {
   font-size: 36px;
   font-weight: bold;
-  color: blacks;
+  color: white;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -29,6 +30,7 @@
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
+  color: white;
 }
 
 @media (max-width: 900px) {

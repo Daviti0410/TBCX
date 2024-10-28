@@ -38,3 +38,20 @@
   text-decoration: none;
   color: inherit;
 }
+
+.header-button {
+  line-height: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-family: Roboto Mono, sans-serif;
+  font-weight: 500;
+  line-height: 100%;
+}
