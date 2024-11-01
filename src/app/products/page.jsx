@@ -1,4 +1,4 @@
-import ProductList from "@/Components/ProductList/ProductList";
+import ProductList from "../../components/ProductList/ProductList";
 import "./Content.css";
 
 async function getProducts(searchTerm = "", sortBy = "title", order = "asc") {
