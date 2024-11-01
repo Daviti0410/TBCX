@@ -2,27 +2,8 @@
 
 import Link from "next/link";
 import "./Header.css";
-import { useRouter } from "next/navigation";
-import { logout } from "@/lib/action";
 
 export default function Header() {
-
-  const router = useRouter();
-
-  const handleLogout = async () => {
-    try {
-      const result = await logout();
-      if (result.success) {
-        router.push("/login");
-      } else {
-        console.error("Logout failed", result.message);
-      }
-    } catch (error) {
-      console.error("Error during logout:", error);
-    }
-  };
-
-
   return (
     <header>
       <div className="header-container">
@@ -48,9 +29,6 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <button className="header-button" onClick={handleLogout}>
-        Log Out
-      </button>
       </div>
     </header>
   );
