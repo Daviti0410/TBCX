@@ -20,6 +20,12 @@ export default function Home() {
           type="email"
         />
         <div className="main-button">SUBMIT</div>
+        <a className="main-button" href="/api/auth/login">
+          LOGIN
+        </a>
+        <a className="main-button" href="/api/auth/logout">
+          LOGOUT
+        </a>
       </div>
     </main>
   );
