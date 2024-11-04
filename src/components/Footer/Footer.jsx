@@ -1,23 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="footer-section">
-      <ul className="footer-links">
+    <footer className="bg-[#1f2937] text-white py-5 flex mx-[15%] justify-center h-32 items-center rounded-t-full mt-10">
+      <ul className="flex gap-12 list-none">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/" className="text-2xl hover:text-[#3b82f6]">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href="/About">About Us</Link>
+          <Link href="/About" className="text-2xl hover:text-[#3b82f6]">
+            About Us
+          </Link>
         </li>
         <li>
-          <Link href="/Blog">Blog</Link>
+          <Link href="/Blog" className="text-2xl hover:text-[#3b82f6]">
+            Blog
+          </Link>
         </li>
         <li>
-          <Link href="/Contact">Contact Us</Link>
+          <Link href="/Contact" className="text-2xl hover:text-[#3b82f6]">
+            Contact Us
+          </Link>
         </li>
       </ul>
     </footer>
