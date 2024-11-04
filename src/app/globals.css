@@ -17,7 +17,24 @@ body {
 body {
   background-repeat: repeat;
   background-size: 100px 100px;
-  background-color: black;
+  background: #f0f4f8;
+}
+.light {
+  --background-color: #f0f4f8;
+  --text-color: #374151;
+}
+
+.dark {
+  --background-color: #111827;
+  --text-color: white;
+}
+
+body,
+.light,
+.dark {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ol,
