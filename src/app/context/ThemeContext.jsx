@@ -7,14 +7,18 @@ function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("");
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      const systemPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      setTheme(systemPrefersDark ? "dark" : "light");
+    try {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+      } else {
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        setTheme(systemPrefersDark ? "dark" : "light");
+      }
+    } catch (e) {
+      console.log(`აქ გავს ერორი ${e}`);
     }
   }, []);
 
