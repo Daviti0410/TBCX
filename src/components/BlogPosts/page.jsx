@@ -47,7 +47,7 @@ export default function BlogPosts({ posts }) {
   return (
     <>
       <AddNewPost setLocalPosts={setLocalPosts} />
-      <div className="container">
+      <div className="flex flex-col p-8 items-center">
         <h1 className="page-title">Posts</h1>
         <div className="posts-container">
           {/* Fetched Posts */}

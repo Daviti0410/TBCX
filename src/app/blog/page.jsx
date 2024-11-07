@@ -1,6 +1,4 @@
 import BlogPosts from "@/components/BlogPosts/page";
-import "./Blog.css";
-
 
 async function fetchPosts() {
   try {
@@ -17,7 +15,7 @@ export default async function Blog() {
   const postsData = await fetchPosts();
 
   return (
-    <section className="Blog">
+    <section className="">
       <BlogPosts posts={postsData} />
     </section>
   );
