@@ -1,14 +1,13 @@
-import createMiddleware from "next-intl/middleware";
+import middleware from "next-intl/middleware";
+
+const createMiddleware = middleware.default;
 
 export default createMiddleware({
-  // A list of all locales that are supported
   locales: ["en", "ka"],
 
-  // Used when no locale matches
   defaultLocale: "en",
 });
 
 export const config = {
-  // Match only internationalized pathnames
   matcher: ["/", "/(ka|en)/:path*"],
 };

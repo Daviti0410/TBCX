@@ -14,28 +14,29 @@ export const metadata = {
   title: "Country",
 };
 
-export default async function RootLayout({ children, params: { locale } }) {
-  const messages = await getMessages();
+async function LocaleLayout({ children, params }) {
+  const { locale } = await params;
 
   if (!routing.locales.includes(locale)) {
     notFound();
   }
+  const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <UserProvider>
-        <body>
+    <html lang={locale}>
+      <body className="dark:bg-black ">
+        <UserProvider>
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider>
-              <div className="flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-grow">{children}</main>
-                <Footer />
-              </div>
+              <Header />
+              {children}
+              <Footer />
             </ThemeProvider>
           </NextIntlClientProvider>
-        </body>
-      </UserProvider>
+        </UserProvider>
+      </body>
     </html>
   );
 }
+
+export default withPageAuthRequired(LocaleLayout);
