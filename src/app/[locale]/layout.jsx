@@ -24,8 +24,8 @@ async function LocaleLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className="dark:bg-black ">
-        <UserProvider>
+      <UserProvider>
+        <body className="dark:bg-black ">
           <NextIntlClientProvider messages={messages}>
             <ThemeProvider>
               <Header />
@@ -33,8 +33,8 @@ async function LocaleLayout({ children, params }) {
               <Footer />
             </ThemeProvider>
           </NextIntlClientProvider>
-        </UserProvider>
-      </body>
+        </body>
+      </UserProvider>
     </html>
   );
 }

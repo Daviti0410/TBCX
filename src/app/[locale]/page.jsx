@@ -1,7 +1,4 @@
-import { useTranslations } from "next-intl";
-
 export default function Home() {
-  const t = useTranslations("HomePage");
   return (
     <main className="transition-colors duration-300">
       <div className="flex flex-col content-center items-center justify-center w-full h-full">
