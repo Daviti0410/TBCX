@@ -1,3 +1,6 @@
+import createNextIntlPlugin from "next-intl/plugin";
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -7,8 +10,13 @@ const nextConfig = {
         hostname: "cdn.dummyjson.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/**",
+      },
     ],
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

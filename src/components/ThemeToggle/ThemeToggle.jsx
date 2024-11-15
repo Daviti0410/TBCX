@@ -1,6 +1,6 @@
 "use client";
+import { ThemeContext } from "@/app/[locale]/context/ThemeContext";
 import { useContext } from "react";
-import { ThemeContext } from "@/app/context/ThemeContext";
 
 export default function ThemeToggle() {
   const { switchDark, switchLight, theme } = useContext(ThemeContext);
