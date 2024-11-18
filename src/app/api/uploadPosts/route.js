@@ -1,38 +1,32 @@
 import { supabase } from "@/lib/connection";
+import { NextResponse } from "next/server";
 
 export async function POST(req) {
+  console.log(supabase);
   try {
     const body = await req.json();
     const { title, description } = body;
 
     if (!title || !description) {
-      return new Response(
-        JSON.stringify({ error: "Title and Description is required" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
+      return NextResponse.json(
+        { error: "Title and Description are required" },
+        { status: 400 }
       );
     }
 
-    const { data, error } = await supabase.from.insert([
-      { title, description },
-    ]);
+    const { data, error } = await supabase
+      .from("blogs")
+      .insert([{ title, description }]);
 
     if (error) {
-      return new Response(JSON.stringify({ error: error.message }), {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      });
+      return NextResponse.json({ error: error.message }, { status: 500 });
     }
-    return new Response(JSON.stringify({ post: data }), {
-      status: 201,
-      headers: { "Content-Type": "application/json" },
-    });
+
+    return NextResponse.json({ post: data }, { status: 201 });
   } catch (err) {
-    return new Resposne(
-      JSON.stringify({ error: "An unexpected error occurred" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
+    return NextResponse.json(
+      { error: "An unexpected error occurred" },
+      { status: 500 }
     );
   }
 }
