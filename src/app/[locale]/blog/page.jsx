@@ -1,8 +1,6 @@
-import BlogPosts from "@/components/BlogPosts/page";
-
 async function fetchPosts() {
   try {
-    const res = await fetch("https://dummyjson.com/posts");
+    const res = await fetch("http://localhost:3000/api/getPosts");
     const data = await res.json();
     return data.posts;
   } catch (error) {
@@ -16,7 +14,11 @@ export default async function Blog() {
 
   return (
     <section className="">
-      <BlogPosts posts={postsData} />
+      <div></div>
+      <div>
+        <h1>{postsData.title}</h1>
+        <p>{postsData.description}</p>
+      </div>
     </section>
   );
 }
