@@ -21,7 +21,7 @@ export default function Home() {
           className="h-14 my-5 mx-5 py-2 px-3 ring-0 outline-none text-gray-800 text-base text-center w-[415px] leading-5 dark:bg-white bg-black dark:border-white border-black border-solid border-2"
           name="email"
           placeholder="YOUR EMAIL ADDRESS"
-          required="required"
+          required
           type="email"
         />
         <div className="w-[415px] h-14 border-solid border-4 border-black text-2xl hover:bg-black hover:text-white  font-bold text-center uppercase py-3 px-4 text-black cursor-pointer ease-in-out duration-100 dark:text-white dark:hover:text-black dark:border-white dark:hover:bg-white">

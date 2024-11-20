@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/routing";
+import { Link } from "../../i18n/routing";
 import "./Header.css";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";

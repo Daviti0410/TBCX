@@ -1,23 +1,26 @@
 import "./globals.css";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Header/Header";
 import ThemeProvider from "./context/ThemeContext";
 
-const { NextIntlClientProvider } = require("next-intl");
-const { getMessages } = require("next-intl/server");
-const { notFound } = require("next/navigation");
-const { routing } = require("@/i18n/routing");
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "../../i18n/routing";
 
 export const metadata = {
   title: "Country",
 };
 
-async function LocaleLayout({ children, params }) {
-  const { locale } = await params;
-
-  if (!routing.locales.includes(locale)) {
+async function LocaleLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
   const messages = await getMessages();
@@ -39,4 +42,4 @@ async function LocaleLayout({ children, params }) {
   );
 }
 
-export default withPageAuthRequired(LocaleLayout);
+export default LocaleLayout;
