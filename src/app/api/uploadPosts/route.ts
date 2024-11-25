@@ -1,10 +1,15 @@
-import { supabase } from "@/lib/connection";
+import { supabase } from "../../../lib/connection";
 import { NextResponse } from "next/server";
 
-export async function POST(req) {
+interface BlogPost {
+  title: string;
+  description: string;
+}
+
+export async function POST(req: Request): Promise<Response> {
   console.log(supabase);
   try {
-    const body = await req.json();
+    const body: BlogPost = await req.json();
     const { title, description } = body;
 
     if (!title || !description) {

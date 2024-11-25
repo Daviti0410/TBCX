@@ -1,3 +1,4 @@
+import React from "react";
 import "./Contact.css";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 import { FaPhoneFlip } from "react-icons/fa6";
@@ -10,7 +11,7 @@ export default function Contact() {
         <div className="contact-info">
           <h2>Mail</h2>
           <p>
-            We are here to help and answer any questions you might have. we are
+            We are here to help and answer any questions you might have. We are
             looking forward to hearing from you.
           </p>
           <div className="inner-contact-info">
@@ -37,7 +38,7 @@ export default function Contact() {
             <input type="text" placeholder="Jhon" name="name" />
           </div>
           <div className="form-group">
-            <label htmlFor="email">email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               placeholder="JhonWick@example.com"
@@ -46,13 +47,11 @@ export default function Contact() {
           </div>
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea
-              type="message"
-              placeholder="Text Message"
-              name="message"
-            />
+            <textarea placeholder="Text Message" name="message" />
           </div>
-          <div className="contact-button">SUBMIT</div>
+          <button type="submit" className="contact-button">
+            SUBMIT
+          </button>
         </form>
       </div>
     </main>

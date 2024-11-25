@@ -6,9 +6,9 @@ function ChangeLanguage() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const changeLanguage = (locale) => {
+  const changeLanguage = (locale: string) => {
     setIsOpen(false);
 
     router.push(`/${locale}${pathname.slice(3)}`);

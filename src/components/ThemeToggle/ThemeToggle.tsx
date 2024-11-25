@@ -1,11 +1,18 @@
 "use client";
-import { ThemeContext } from "@/app/[locale]/context/ThemeContext";
+
+import { ThemeContext } from "../../app/[locale]/context/ThemeContext";
 import { useContext } from "react";
 
 export default function ThemeToggle() {
-  const { switchDark, switchLight, theme } = useContext(ThemeContext);
+  const context = useContext(ThemeContext);
 
-  const toggleTheme = () => {
+  if (!context) {
+    throw new Error("ThemeToggle must be used within a ThemeProvider");
+  }
+
+  const { switchDark, switchLight, theme } = context;
+
+  const toggleTheme = (): void => {
     if (theme === "light") {
       switchDark();
     } else {

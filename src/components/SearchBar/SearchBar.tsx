@@ -1,12 +1,13 @@
 "use client";
 
 import "./SearchBar.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 
 export default function SearchBar() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState(searchQuery);
+  const [searchQuery, setSearchQuery] = useState<string>("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] =
+    useState<string>(searchQuery);
   const router = useRouter();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function SearchBar() {
     }
   }, [debouncedSearchQuery, router]);
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const value = e.target.value;
     setSearchQuery(value);
   };

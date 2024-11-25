@@ -1,14 +1,16 @@
-import { supabase } from "@/lib/connection";
+import { supabase } from "../../../lib/connection";
 
-export async function GET(req) {
+export async function GET(req: Request): Promise<Response> {
   try {
     const { data: posts, error } = await supabase.from("blogs").select("*");
+
     if (error) {
       return new Response(JSON.stringify({ error: error.message }), {
         status: 500,
         headers: { "Content-Type": "application/json" },
       });
     }
+
     return new Response(JSON.stringify({ posts }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
