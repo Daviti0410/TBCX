@@ -1,7 +1,7 @@
 import { Link } from "../../i18n/routing";
 import "./Header.css";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
+import ThemeToggle from "../ThemeToggle";
+import ChangeLanguage from "../ChangeLanguage";
 import { useTranslations } from "next-intl";
 
 export default function Header() {
@@ -26,11 +26,6 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-[#3b82f6]">
-                {t("contact")}
-              </Link>
-            </li>
-            <li>
               <Link href="/products" className="hover:text-[#3b82f6]">
                 {t("products")}
               </Link>
@@ -40,7 +35,6 @@ export default function Header() {
                 {t("profile")}
               </Link>
             </li>
-            <ThemeToggle />
           </ul>
         </nav>
         <a
@@ -50,6 +44,9 @@ export default function Header() {
           LogOut
         </a>
         <ChangeLanguage />
+        <div className="pl-10">
+          <ThemeToggle />
+        </div>
       </div>
     </header>
   );

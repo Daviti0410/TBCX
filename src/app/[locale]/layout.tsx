@@ -1,7 +1,7 @@
 import "./globals.css";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Header/Header";
+import Footer from "../../components/Footer";
 import ThemeProvider from "./context/ThemeContext";
 
 import { NextIntlClientProvider } from "next-intl";
@@ -15,11 +15,12 @@ export const metadata = {
 
 async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }

@@ -1,12 +1,21 @@
-import ProductList from "../../components/ProductList/ProductList";
-import "./Content.css";
+import ProductList from "../../../components/ProductList";
 
-async function getProducts(searchTerm = "", sortBy = "title", order = "asc") {
+type Product = {
+  id: number;
+  name: string;
+  price: number;
+  img: string;
+  rating: number;
+  comments: string;
+};
+
+async function getProducts(): Promise<Product[]> {
   try {
-    const res = await fetch(
-      `https://dummyjson.com/products/search?q=${searchTerm}&sortBy=${sortBy}&order=${order}`
-    );
-    const data = await res.json();
+    const res = await fetch(`http://localhost:3000/api/getProducts`);
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
+    }
+    const data: { products: Product[] } = await res.json();
     return data.products;
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -14,15 +23,10 @@ async function getProducts(searchTerm = "", sortBy = "title", order = "asc") {
   }
 }
 
-export default async function Content({ searchParams }) {
-  const searchTerm = searchParams?.search || "";
-  const sortBy = searchParams?.sortBy || "title";
-  const order = searchParams?.order || "asc";
-
-  const products = await getProducts(searchTerm, sortBy, order);
-
+export default async function Content(): Promise<JSX.Element> {
+  const products = await getProducts();
   return (
-    <div className="main-container080">
+    <div className="">
       <ProductList products={products} />
     </div>
   );

@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="transition-colors duration-300">
+    <main className="transition-colors duration-300 mt-56">
       <div className="flex flex-col content-center items-center justify-center w-full h-full">
         <div className="main-top-content">
           <h1 className="text-center content-center w-[415px] h-52 text-5xl font-bold inline-block mr-auto mb-5 ml-auto mt-5 p-5 border-solid border-8 dark:border-white dark:text-white border-black text-black tracking-wider drop-shadow-sm">
